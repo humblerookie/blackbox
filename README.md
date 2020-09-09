@@ -17,7 +17,13 @@ Blackbox is a tool that enables your QA team to share the crash logs with you. I
 
 
 	dependencies {
-		implementation 'com.github.humblerookie:blackbox:0.0.1'
+		implementation 'com.github.humblerookie.blackbox:blackbox:0.0.2'
+	}
+
+For release versions there is a no-op version available as well
+
+	dependencies {
+		implementation 'com.github.humblerookie.blackbox:blackbox-no-op:0.0.2'
 	}
 
 ### Feature Additions
