@@ -1,4 +1,4 @@
 include ':blackbox-no-op'
-include ':blackbox'
+include ':blackbox-main'
 include ':app'
-rootProject.name = "bb"
+rootProject.name = "blackbox"
