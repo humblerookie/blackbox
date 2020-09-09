@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BlackBox.Theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary_BlackBox</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_BlackBox</item>
+        <item name="colorAccent">@color/colorAccent_BlackBox</item>
+    </style>
+</resources>
