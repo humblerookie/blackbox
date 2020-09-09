@@ -1,3 +1,4 @@
-include ':library'
+include ':blackbox-no-op'
+include ':blackbox'
 include ':app'
 rootProject.name = "blackbox"
