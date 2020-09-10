@@ -1,0 +1,12 @@
+<resources>
+    <string name="bb_title">BlackBox</string>
+    <string name="bb_crashes">Crashes</string>
+    <string name="bb_channel_name">Crashes</string>
+    <string name="bb_channel_description">Crash Notifications</string>
+    <string name="bb_placeholder_notifications">Crashes will be shown here</string>
+    <string name="bb_view_crash_report">View Crash Report</string>
+    <string name="bb_share">Share</string>
+    <string name="bb_copy">Copy</string>
+    <string name="bb_view_all">View All</string>
+    <string name="bb_copied_confirmation">Error trace has been copied to clipboard.</string>
+</resources>

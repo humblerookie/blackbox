@@ -5,7 +5,6 @@ plugins {
     id 'com.diffplug.spotless'
     id 'com.vanniktech.maven.publish'
 }
-
 spotless {
     kotlin {
         target "**/*.kt"
@@ -40,5 +39,10 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation Deps.kotlinStdLib
+    implementation Deps.materialComponents
+    implementation Deps.appCompat
+    implementation Deps.localBroadcast
     testImplementation TestDeps.junit
+
 }

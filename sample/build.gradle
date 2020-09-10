@@ -1,33 +1,20 @@
-plugins {
-    id 'com.android.library'
-    id 'kotlin-android'
-    id 'kotlin-android-extensions'
-    id 'com.diffplug.spotless'
-    id 'com.vanniktech.maven.publish'
-}
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
-spotless {
-    kotlin {
-        target "**/*.kt"
-        ktlint(Versions.KT_LINT)
-    }
-}
+
+
 android {
     compileSdkVersion Versions.compileSdk
 
     defaultConfig {
+        applicationId Versions.appId
         minSdkVersion Versions.minSdk
         targetSdkVersion Versions.targetSdk
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
-    }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     buildTypes {
@@ -40,5 +27,10 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation project(":blackbox-no-op")
+    implementation Deps.androidKtx
+    implementation Deps.appCompat
+    implementation Deps.constraintLayout
     testImplementation TestDeps.junit
+
 }

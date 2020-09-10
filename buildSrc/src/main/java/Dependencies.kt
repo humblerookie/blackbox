@@ -16,10 +16,12 @@ object Versions {
     const val CONSTRAINT_LAYOUT = "2.0.1"
 
     // Kotlin
-    const val KOTLIN = "1.3.72"
+    const val KOTLIN = "1.4.0"
     const val JUNIT = "4.12"
 
     const val LOCAL_BROADCAST = "1.0.0"
+    const val PUBLISH = "0.11.1"
+    const val KT_LINT="0.38.1"
 
 }
 
@@ -34,6 +36,8 @@ object Deps {
         "androidx.constraintlayout:constraintlayout:${Versions.CONSTRAINT_LAYOUT}"
     val localBroadcast =
         "androidx.localbroadcastmanager:localbroadcastmanager:${Versions.LOCAL_BROADCAST}"
+    val mavenPublish = "com.vanniktech:gradle-maven-publish-plugin:${Versions.PUBLISH}"
+
 }
 
 object TestDeps {

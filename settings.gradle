@@ -1,4 +1,4 @@
 include ':blackbox-no-op'
-include ':blackbox-main'
-include ':app'
-rootProject.name = "blackbox"
+include ':blackbox'
+include ':sample'
+rootProject.name = "blackbox-android"
