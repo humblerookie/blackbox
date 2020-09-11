@@ -3,6 +3,7 @@
     <color name="colorPrimary_BlackBox">#ffffff</color>
     <color name="colorPrimaryDark_BlackBox">#1d2d50</color>
     <color name="colorAccent_BlackBox">#1e5f74</color>
-    <color name="black_54">#8A000000</color>
+    <color name="surface">#3D000000</color>
+    <color name="black_12">#1F000000</color>
     <color name="black">#000000</color>
 </resources>
