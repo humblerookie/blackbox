@@ -2,6 +2,7 @@ package dev.anvith.blackbox
 
 import android.app.Application
 
+
 /**
  * Created by Anvith on 08/09/20.
  */
