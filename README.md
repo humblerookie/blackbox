@@ -26,15 +26,31 @@ For release versions there is a no-op version available as well
 In your application class add the following code
 
 	override fun onCreate(){
-		 Blackbox.Builder()
+		 Blackbox
 	            .context(this)
 	            .init()
 	}
 
 
-### Feature Additions
-- Allow multiple crash log storage
-- Provide an activity to view all crash logs
+
+License
+=======
+
+    Copyright 2020 Anvith Bhat
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
 
 ### Demo
 ![Demo](assets/demo.gif)
+
