@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.hr.blackbox">
+    package="dev.anvith.blackbox">
 
     <uses-permission
         android:name="android.permission.GET_ACCOUNTS"
@@ -9,7 +9,7 @@
 
     <application>
 
-        <activity android:name=".ui.ExceptionListActivity"/>
-        <receiver android:name=".listeners.ActionsBroadcastListener" />
+        <activity android:name="dev.anvith.blackbox.ui.ExceptionListActivity" />
+        <receiver android:name="dev.anvith.blackbox.listeners.ActionsBroadcastListener" />
     </application>
 </manifest>
