@@ -6,9 +6,6 @@ import dev.anvith.blackbox.extensions.toInfo
 import dev.anvith.blackbox.utils.writeToFile
 import java.io.File
 
-/**
- * Created by Anvith on 10/09/20.
- */
 
 class FileStorage(private val context: Context) :
     Storage {

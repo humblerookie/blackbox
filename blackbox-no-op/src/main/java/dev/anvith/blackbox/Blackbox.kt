@@ -3,7 +3,7 @@ package dev.anvith.blackbox
 import android.content.Context
 
 /**
- * Created by Anvith on 09/09/20.
+ * A dummy no op class to avoid compilation issues
  */
 class Blackbox {
 
