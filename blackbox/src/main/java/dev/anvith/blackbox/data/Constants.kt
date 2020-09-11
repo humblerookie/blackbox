@@ -1,8 +1,5 @@
 package dev.anvith.blackbox.data
 
-/**
- * Created by Anvith on 09/09/20.
- */
 
 object Constants {
 

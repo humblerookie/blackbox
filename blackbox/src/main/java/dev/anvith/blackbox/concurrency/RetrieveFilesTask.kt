@@ -10,9 +10,12 @@ import dev.anvith.blackbox.ui.ExceptionsAdapter
 import java.lang.ref.WeakReference
 
 /**
- * Its 2020 and we still need to use AsyncTask  🤦
+ * Its 2020 and we still need to use AsyncTask 🤦
  * since the Platform lacks better native concurrency primitives
- * */
+ * @param context Required for accessing storage
+ * @param list To post the updated exception list on.
+ * @param lifecycle Check in case results don't have to be delivered
+ */
 class RetrieveFilesTask(
     context: Context,
     private val list: WeakReference<RecyclerView>,
