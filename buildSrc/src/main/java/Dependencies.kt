@@ -5,7 +5,7 @@ object Versions {
     const val compileSdk = 28
     const val minSdk = 21
     const val targetSdk = 28
-    const val appId = "com.hr.blackbox"
+    const val appId = "dev.anvith.blackbox"
 
     const val GRADLE = "4.0.1"
 

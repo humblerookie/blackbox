@@ -27,7 +27,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation project(":blackbox-no-op")
+    implementation project(":blackbox")
     implementation Deps.androidKtx
     implementation Deps.appCompat
     implementation Deps.constraintLayout
