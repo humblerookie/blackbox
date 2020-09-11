@@ -5,7 +5,7 @@ object Versions {
     const val compileSdk = 28
     const val minSdk = 21
     const val targetSdk = 28
-    const val appId = "com.hr.blackbox"
+    const val appId = "dev.anvith.blackbox"
 
     const val GRADLE = "4.0.1"
 
@@ -20,9 +20,9 @@ object Versions {
     const val JUNIT = "4.12"
 
     const val LOCAL_BROADCAST = "1.0.0"
-    const val PUBLISH = "0.11.1"
+    const val PUBLISH = "0.13.0"
     const val KT_LINT="0.38.1"
-
+    const val DOKKA="1.4.0"
 }
 
 object Deps {
@@ -37,6 +37,7 @@ object Deps {
     val localBroadcast =
         "androidx.localbroadcastmanager:localbroadcastmanager:${Versions.LOCAL_BROADCAST}"
     val mavenPublish = "com.vanniktech:gradle-maven-publish-plugin:${Versions.PUBLISH}"
+    val dokka ="org.jetbrains.dokka:dokka-gradle-plugin:${Versions.DOKKA}"
 
 }
 
