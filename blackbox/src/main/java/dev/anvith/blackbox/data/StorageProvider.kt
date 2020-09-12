@@ -19,6 +19,7 @@ class StorageProvider {
 
     companion object {
         private lateinit var storage: FileStorage
+
         fun getStorage(context: Context): Storage {
             if (!Companion::storage.isInitialized) {
                 storage =

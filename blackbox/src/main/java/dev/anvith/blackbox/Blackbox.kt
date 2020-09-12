@@ -1,14 +1,10 @@
 package dev.anvith.blackbox
 
 import android.content.Context
-import android.content.IntentFilter
-import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import android.content.Intent
+import android.os.Build
 import dev.anvith.blackbox.Blackbox.Companion.init
-import dev.anvith.blackbox.concurrency.PostNotificationTask
-import dev.anvith.blackbox.data.Storage
 import dev.anvith.blackbox.data.StorageProvider
-import dev.anvith.blackbox.listeners.ActionsBroadcastListener
-import dev.anvith.blackbox.listeners.ActionsBroadcastListener.Companion.BB_ACTION_EVENT
 import dev.anvith.blackbox.processor.BlackboxProcessor
 import dev.anvith.blackbox.processor.BlackboxUncaughtExceptionHandler
 
@@ -31,6 +27,7 @@ class Blackbox {
          */
 
         fun context(context: Context): Companion {
+            println("hey 1")
             ctx = context.applicationContext
             return this
         }
@@ -46,13 +43,13 @@ class Blackbox {
             return this
         }
 
-
         /**
          * This is the entry point into the library.
          * Invoking this initializes all the relevant components including the initial notification.
          */
 
         fun init() {
+            println("hey 2")
             if (!Companion::ctx.isInitialized) {
                 throw IllegalStateException("You need to provide an context for instantiation")
             }
@@ -67,12 +64,8 @@ class Blackbox {
             setExceptionHandler(
                 exceptionHandler
             )
-            initReceiver(
+            registerService(
                 ctx
-            )
-            showNotification(
-                ctx,
-                storage
             )
         }
 
@@ -82,19 +75,14 @@ class Blackbox {
             }
         }
 
-        private fun initReceiver(context: Context) {
-            LocalBroadcastManager.getInstance(context)
-                .registerReceiver(ActionsBroadcastListener(), IntentFilter(BB_ACTION_EVENT))
-        }
-
-        private fun showNotification(
-            context: Context,
-            storage: Storage
-        ) {
-            PostNotificationTask(
-                context,
-                storage
-            ).execute()
+        private fun registerService(context: Context) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                context.startForegroundService(
+                    Intent(context, FileWatcherService::class.java)
+                )
+            } else {
+                context.startService(Intent(context, FileWatcherService::class.java))
+            }
         }
     }
 }

@@ -1,6 +1,5 @@
 package dev.anvith.blackbox.data
 
-
 object Constants {
 
     const val NOTIFICATION_ID = 1

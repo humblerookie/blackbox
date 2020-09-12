@@ -9,10 +9,8 @@ import android.app.Application
 class BlackboxApplication : Application() {
     override fun onCreate() {
         super.onCreate()
-        if (BuildConfig.DEBUG) {
             //initialise reporter with external path
             Blackbox.context(this)
                 .init()
-        }
     }
 }
