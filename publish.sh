@@ -1,0 +1,1 @@
+ ./gradlew clean uploadArchives --no-daemon --no-parallel

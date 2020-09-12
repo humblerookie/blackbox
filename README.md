@@ -1,16 +1,19 @@
-# Blackbox
+# Blackbox ![Latest Version](https://img.shields.io/nexus/r/dev.anvith.blackbox/blackbox?server=https%3A%2F%2Foss.sonatype.org)
 
 Blackbox is a tool that enables your QA team to share the crash logs with you. It displays a notification on restarting the app allowing copy and share options.
 
 ## Usage
 **Step 1:**  Add the dependency
 
-`implementation 'dev.anvith.blackbox:blackbox:0.0.4'`
+```
+implementation 'dev.anvith.blackbox.blackbox:<latest-version>'
+```
 
+For release versions there is a no-op version available.
 
-For release versions there is a no-op version available as well
-
-`implementation 'dev.anvith.blackbox:blackbox-no-op:0.0.4'`
+```
+implementation 'dev.anvith.blackbox:blackbox-no-op:<latest-version>'
+```
 
 **Step 2:**
 In your application class add the following code
