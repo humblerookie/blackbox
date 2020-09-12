@@ -7,31 +7,24 @@ buildscript {
     dependencies {
         classpath Deps.agp
         classpath Deps.kotlinPlugin
-        classpath Deps.mavenPublish
-        classpath Deps.dokka
     }
 }
 
 plugins {
     id "com.diffplug.spotless" version "5.2.0"
-    id 'signing'
 }
 
 allprojects {
     repositories {
         google()
         jcenter()
+        mavenLocal()
+        maven { url 'https://jitpack.io' }
 
     }
     group = project.property("GROUP") as String
     version = project.property("VERSION_NAME") as String
 
-    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
-        kotlinOptions {
-            jvmTarget = "1.8"
-            freeCompilerArgs += ["-Xallow-jvm-ir-dependencies", "-Xskip-prerelease-check"]
-        }
-    }
 }
 
 
