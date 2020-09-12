@@ -11,5 +11,9 @@
 
         <activity android:name="dev.anvith.blackbox.ui.ExceptionListActivity" />
         <receiver android:name="dev.anvith.blackbox.listeners.ActionsBroadcastListener" />
+        <service
+            android:name=".FileWatcherService"
+            android:enabled="true"
+            android:process=":crash_reporting" />
     </application>
 </manifest>
