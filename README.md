@@ -1,28 +1,21 @@
-# Blackbox
+# Blackbox ![Latest Version](https://img.shields.io/nexus/r/dev.anvith.blackbox/blackbox?server=https%3A%2F%2Foss.sonatype.org)
 
 Blackbox is a tool that enables your QA team to share the crash logs with you. It displays a notification on restarting the app allowing copy and share options.
 
 ## Usage
-**Step 1:** Add jitpack in your root build.gradle at the end of repositories:
+**Step 1:**  Add the dependency
 
+```
+implementation 'dev.anvith.blackbox.blackbox:<latest-version>'
+```
 
-    allprojects {
-            repositories {
-                ...
-                maven { url 'https://jitpack.io' }
-            }
-        }
+For release versions there is a no-op version available.
 
-**Step 2:**  Add the dependency
+```
+implementation 'dev.anvith.blackbox:blackbox-no-op:<latest-version>'
+```
 
-`implementation 'com.github.humblerookie.blackbox:blackbox-main:0.0.3'`
-
-
-For release versions there is a no-op version available as well
-
-`implementation 'com.github.humblerookie.blackbox:blackbox-no-op:0.0.3'`
-
-**Step 3:**
+**Step 2:**
 In your application class add the following code
 
 	override fun onCreate(){
