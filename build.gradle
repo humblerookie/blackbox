@@ -10,10 +10,6 @@ buildscript {
     }
 }
 
-plugins {
-    id "com.diffplug.spotless" version "5.2.0"
-}
-
 allprojects {
     repositories {
         google()
@@ -27,8 +23,7 @@ allprojects {
 
 }
 
-
-clean {
+task clean(type: Delete) {
     delete rootProject.buildDir
 }
 

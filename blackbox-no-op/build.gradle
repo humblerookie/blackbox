@@ -1,16 +1,7 @@
-plugins {
-    id 'com.android.library'
-    id 'kotlin-android'
-    id 'kotlin-android-extensions'
-    id 'com.diffplug.spotless'
-}
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
-spotless {
-    kotlin {
-        target "**/*.kt"
-        ktlint(Versions.KT_LINT)
-    }
-}
 android {
     compileSdkVersion Versions.compileSdk
 
