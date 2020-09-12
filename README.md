@@ -1,4 +1,4 @@
-# Blackbox ![Version](https://jitpack.io/v/humblerookie/blackbox.svg)
+# Blackbox
 
 Blackbox is a tool that enables your QA team to share the crash logs with you. It displays a notification on restarting the app allowing copy and share options.
 
@@ -15,12 +15,12 @@ Blackbox is a tool that enables your QA team to share the crash logs with you. I
 
 **Step 2:**  Add the dependency
 
-`implementation 'com.github.humblerookie.blackbox:blackbox-main:<version>'`
+`implementation 'com.github.humblerookie.blackbox:blackbox-main:0.0.3'`
 
 
 For release versions there is a no-op version available as well
 
-`implementation 'com.github.humblerookie.blackbox:blackbox-no-op:<version>'`
+`implementation 'com.github.humblerookie.blackbox:blackbox-no-op:0.0.3'`
 
 **Step 3:**
 In your application class add the following code
