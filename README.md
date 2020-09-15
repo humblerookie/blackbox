@@ -6,7 +6,7 @@ Blackbox is a tool that enables your QA team to share the crash logs with you. I
 **Step 1:**  Add the dependency
 
 ```
-implementation 'dev.anvith.blackbox.blackbox:<latest-version>'
+implementation 'dev.anvith.blackbox:blackbox:<latest-version>'
 ```
 
 For release versions there is a no-op version available.
