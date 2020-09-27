@@ -20,5 +20,12 @@
         android:layout_marginTop="16dp"
         android:text="@string/index_out_of_bounds" />
 
+    <Button
+        android:id="@+id/open_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/open_crash_list" />
+
 
 </LinearLayout>

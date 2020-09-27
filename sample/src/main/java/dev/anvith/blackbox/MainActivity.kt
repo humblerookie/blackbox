@@ -1,10 +1,12 @@
 package dev.anvith.blackbox
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import dev.anvith.blackbox.ui.ExceptionListActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,6 +28,11 @@ class MainActivity : AppCompatActivity() {
             val crashMe = list[2]
             Log.d(TAG, "$crashMe")
         }
+
+        findViewById<View>(R.id.open_list).setOnClickListener {
+           startActivity(Intent(this, ExceptionListActivity::class.java))
+        }
+
 
     }
 
