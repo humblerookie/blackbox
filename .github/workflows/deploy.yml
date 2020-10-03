@@ -26,23 +26,27 @@ jobs:
 
       - name: Run tests
         run: ./gradlew test
-        
-      - name: Import GPG Keys
+
+      - name: Import GPG key
+        id: import_gpg
+        uses: crazy-max/ghaction-import-gpg@v3
+        with:
+          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_KEY_PASS }}
+
+      - name: Import Secring Key
         run: |
           cd $HOME
           mkdir -p ~/.gnupg/
           printf "$GPG_SIGNING_KEY" | base64 --decode > ~/.gnupg/secring.gpg
         env:
           GPG_SIGNING_KEY: ${{ secrets.GPG_SIGNING_KEY }}
-      - name: Add gradle properties
-        run: |
-         echo "signing.keyId=$GPG_KEY_ID\nsigning.password=$GPG_KEY_PASS\nsigning.secretKeyRingFile=$HOME/.gnupg/secring.gpg\nSONATYPE_NEXUS_USERNAME=$SONATYPE_USER\nSONATYPE_NEXUS_PASSWORD=$SONATYPE_PASSWORD\n" > "$HOME/.gradle/gradle.properties"
-        env: 
+      - name: Publish To Sonatype
+        run: ./gradlew signMavenPublication -Psigning.secretKeyRingFile=$HOME/.gnupg/secring.gpg -Psigning.password=$GPG_KEY_PASS -Psigning.keyId=$GPG_KEY_ID uploadArchives --no-daemon --no-parallel --stacktrace
+        env:
           GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
           GPG_KEY_PASS: ${{ secrets.GPG_KEY_PASS }}
           SONATYPE_USER: ${{ secrets.SONATYPE_USER }}
           SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
-      - name: Publish To Sonatype
-        run: ./gradlew uploadArchives --no-daemon --no-parallel
         
           
