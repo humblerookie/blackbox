@@ -26,21 +26,21 @@ object Versions {
 }
 
 object Deps {
-    val appCompat = "androidx.appcompat:appcompat:${Versions.APP_COMPAT}"
-    val materialComponents = "com.google.android.material:material:${Versions.MATERIAL}"
-    val androidKtx = "androidx.core:core-ktx:${Versions.ANDROID_KTX}"
-    val kotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.KOTLIN}"
-    val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.KOTLIN}"
-    val agp = "com.android.tools.build:gradle:${Versions.GRADLE}"
-    val constraintLayout =
+    const val appCompat = "androidx.appcompat:appcompat:${Versions.APP_COMPAT}"
+    const val materialComponents = "com.google.android.material:material:${Versions.MATERIAL}"
+    const val androidKtx = "androidx.core:core-ktx:${Versions.ANDROID_KTX}"
+    const val kotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.KOTLIN}"
+    const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.KOTLIN}"
+    const val agp = "com.android.tools.build:gradle:${Versions.GRADLE}"
+    const val constraintLayout =
         "androidx.constraintlayout:constraintlayout:${Versions.CONSTRAINT_LAYOUT}"
-    val localBroadcast =
+    const val localBroadcast =
         "androidx.localbroadcastmanager:localbroadcastmanager:${Versions.LOCAL_BROADCAST}"
-    val mavenPublish = "com.vanniktech:gradle-maven-publish-plugin:${Versions.PUBLISH}"
-    val dokka ="org.jetbrains.dokka:dokka-gradle-plugin:${Versions.DOKKA}"
+    const val mavenPublish = "com.vanniktech:gradle-maven-publish-plugin:${Versions.PUBLISH}"
+    const val dokka ="org.jetbrains.dokka:dokka-gradle-plugin:${Versions.DOKKA}"
 
 }
 
 object TestDeps {
-    val junit = "junit:junit:${Versions.JUNIT}"
+    const val junit = "junit:junit:${Versions.JUNIT}"
 }
