@@ -106,9 +106,14 @@ private fun ExceptionInfo.getActionPendingIntent(
         }
 
     return PendingIntent.getBroadcast(
+        /* context = */
         context,
+        /* requestCode = */
         actionId.toRequestId(),
+        /* intent = */
         broadcastEvent,
-        PendingIntent.FLAG_UPDATE_CURRENT
+        /* flags = */
+        PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT,
+
     )
 }

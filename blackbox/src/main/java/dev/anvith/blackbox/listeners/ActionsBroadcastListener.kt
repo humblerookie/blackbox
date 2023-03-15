@@ -33,7 +33,7 @@ class ActionsBroadcastListener : BroadcastReceiver() {
                 val clipboard =
                     context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
                 val clip = ClipData.newPlainText(intent.title, intent.message)
-                clipboard.primaryClip = clip
+                clipboard.setPrimaryClip(clip)
                 Toast.makeText(
                     context,
                     R.string.bb_copied_confirmation,
