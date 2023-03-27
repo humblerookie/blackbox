@@ -1,6 +1,7 @@
-package dev.anvith.blackbox
+package dev.anvith.blackbox.sample
 
 import android.app.Application
+import dev.anvith.blackbox.Blackbox
 
 
 /**
@@ -10,7 +11,6 @@ class BlackboxApplication : Application() {
     override fun onCreate() {
         super.onCreate()
             //initialise reporter with external path
-            Blackbox.context(this)
-                .init()
+        Blackbox.context(this).init()
     }
 }
