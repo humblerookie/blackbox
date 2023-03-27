@@ -39,3 +39,6 @@ clean {
     delete rootProject.buildDir
 }
 
+signing {
+    useGpgCmd()
+}
