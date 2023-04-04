@@ -7,7 +7,7 @@ object Versions {
     const val targetSdk =  33
     const val appId = "dev.anvith.blackbox"
 
-    const val GRADLE = "7.0.0"
+    const val GRADLE = "7.2.0"
 
     // Android libraries
     const val APP_COMPAT = "1.2.0"

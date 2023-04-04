@@ -22,6 +22,7 @@
             android:layout_weight="1"
             android:ellipsize="end"
             android:maxLines="1"
+            android:textColor="@color/black"
             android:textStyle="bold"
             tools:text="NullPointerException" />
 
@@ -30,6 +31,7 @@
             style="?textAppearanceBody1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black_54"
             android:textStyle="italic"
             tools:text="12-1-2020 8:15pm" />
     </LinearLayout>
@@ -42,6 +44,7 @@
         android:layout_height="wrap_content"
         android:ellipsize="end"
         android:maxLines="3"
+        android:textColor="@color/black_54"
         tools:text="Something shitty Happened" />
 
     <LinearLayout
