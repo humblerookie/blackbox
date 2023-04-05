@@ -55,7 +55,11 @@ class Blackbox {
                 ctx
             )
             val exceptionHandler = BlackboxUncaughtExceptionHandler(
-                secondaryExceptionHandlers,
+                secondaryExceptionHandlers.toMutableList().apply {
+                    Thread.getDefaultUncaughtExceptionHandler()
+                        ?.let { add(it) }
+                }.toSet()
+                    .toList(),
                 BlackboxProcessor(ctx, storage)
             )
 

@@ -10,7 +10,7 @@ import dev.anvith.blackbox.Blackbox
 class BlackboxApplication : Application() {
     override fun onCreate() {
         super.onCreate()
-            //initialise reporter with external path
+        //initialise reporter with external path
         Blackbox.context(this).init()
     }
 }
